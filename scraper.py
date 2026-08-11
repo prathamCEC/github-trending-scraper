@@ -1,0 +1,90 @@
+import requests
+import re
+import csv
+from bs4 import BeautifulSoup
+
+URL = "https://github.com/trending"
+
+headers = {"User-Agent": "Mozilla/5.0"}
+
+response = requests.get(URL, headers=headers)
+response.raise_for_status()
+
+soup = BeautifulSoup(response.text, "html.parser")
+
+repositories = []
+
+for rank, repo in enumerate(soup.select("article.Box-row"), 1):
+
+    link = repo.select_one("h2 a")
+    if not link:
+        continue
+
+    name = link.get_text(" ", strip=True)
+    url = "https://github.com" + link["href"]
+
+    description_tag = repo.select_one("p")
+    description = (
+        description_tag.get_text(" ", strip=True)
+        if description_tag else "No description"
+    )
+
+    language_tag = repo.select_one('[itemprop="programmingLanguage"]')
+    language = (
+        language_tag.get_text(strip=True)
+        if language_tag else "Unknown"
+    )
+
+    stars_tag = repo.select_one('a[href$="/stargazers"]')
+    stars = stars_tag.get_text(strip=True) if stars_tag else "0"
+
+    today = re.search(
+        r"([\d,]+)\s+stars today",
+        repo.get_text(" ", strip=True)
+    )
+
+    stars_today = today.group(1) if today else "0"
+
+    repositories.append({
+        "rank": rank,
+        "repository": name,
+        "language": language,
+        "stars": stars,
+        "stars_today": stars_today,
+        "url": url,
+        "description": description
+    })
+
+
+# ---------- CLI REPORT ----------
+
+print("\n" + "=" * 70)
+print(" GITHUB TRENDING REPORT")
+print("=" * 70)
+
+print(f"Repositories found: {len(repositories)}\n")
+
+for repo in repositories:
+
+    print(f"#{repo['rank']}  {repo['repository']}")
+    print(f"    Language   : {repo['language']}")
+    print(f"    Total Stars: {repo['stars']}")
+    print(f"    Today      : +{repo['stars_today']}")
+    print(f"    URL        : {repo['url']}")
+    print(f"    About      : {repo['description'][:100]}")
+    print("-" * 70)
+
+
+# ---------- SAVE CSV ----------
+
+with open("trending.csv", "w", newline="", encoding="utf-8") as file:
+
+    writer = csv.DictWriter(
+        file,
+        fieldnames=repositories[0].keys()
+    )
+
+    writer.writeheader()
+    writer.writerows(repositories)
+
+print("\n✅ Data saved to trending.csv")
