@@ -31,6 +31,12 @@ for rank, repo in enumerate(soup.select("article.Box-row"), 1):
         continue
 
     name = link.get_text(" ", strip=True)
+
+    # Split username and repository
+    username, repository_name = [
+        part.strip() for part in name.split("/", 1)
+    ]
+
     url = "https://github.com" + link["href"]
 
     description_tag = repo.select_one("p")
@@ -70,7 +76,8 @@ for rank, repo in enumerate(soup.select("article.Box-row"), 1):
 
     repositories.append({
         "rank": rank,
-        "repository": name,
+        "username": username,
+        "repository": repository_name,
         "language": language,
         "stars": stars,
         "stars_today": stars_today,
@@ -91,7 +98,9 @@ print(f"\nRepositories found: {len(repositories)}\n")
 
 for repo in repositories:
 
-    print(f"#{repo['rank']}  {repo['repository']}")
+    print(f"#{repo['rank']}  {repo['username']}/{repo['repository']}")
+    print(f"    Username    : {repo['username']}")
+    print(f"    Repository  : {repo['repository']}")
     print(f"    Language    : {repo['language']}")
     print(f"    Total Stars : {repo['stars']}")
     print(f"    Today       : +{repo['stars_today']}")
@@ -121,6 +130,7 @@ cursor = connection.cursor()
 cursor.execute("""
     CREATE TABLE IF NOT EXISTS repositories (
         id SERIAL PRIMARY KEY,
+        username VARCHAR(100),
         repository VARCHAR(200),
         description TEXT,
         language VARCHAR(50),
@@ -143,9 +153,11 @@ for repo in repositories:
 
     cursor.execute("""
         INSERT INTO repositories
-        (repository, description, language, stars, stars_today, url)
-        VALUES (%s, %s, %s, %s, %s, %s)
+        (username, repository, description, language,
+         stars, stars_today, url)
+        VALUES (%s, %s, %s, %s, %s, %s, %s)
     """, (
+        repo["username"],
         repo["repository"],
         repo["description"],
         repo["language"],
@@ -159,6 +171,5 @@ connection.commit()
 
 cursor.close()
 connection.close()
-
 
 print("\nData successfully stored in PostgreSQL.")

@@ -22,3 +22,17 @@ services:
       POSTGRES_DB: github_trending
     ports:
       - "5434:5432"
+
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: github-trending-web
+    container_name: github_trending_web
+    command: python app.py
+    depends_on:
+      - psql-db
+    ports:
+      - "5000:5000"
+    volumes:
+      - .:/app
