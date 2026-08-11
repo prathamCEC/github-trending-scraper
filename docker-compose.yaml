@@ -1,0 +1,11 @@
+services:
+  scraper:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: github-trending-scraper
+    container_name: github_trending_container
+    stdin_open: true
+    tty: true
+    volumes:
+      - .:/app

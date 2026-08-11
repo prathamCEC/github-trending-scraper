@@ -1,17 +1,17 @@
 rank,repository,language,stars,stars_today,url,description
-1,semantica-agi / semantica,Python,"4,378",970,https://github.com/semantica-agi/semantica,Graph-Native Infrastructure for Context and Accountable AI Systems
-2,msitarzewski / agency-agents,Shell,"142,044","1,349",https://github.com/msitarzewski/agency-agents,"A complete AI agency at your fingertips - From frontend wizards to Reddit community ninjas, from whimsy injectors to reality checkers. Each agent is a specialized expert with personality, processes, and proven deliverables."
-3,NanmiCoder / MediaCrawler,Python,"61,395",259,https://github.com/NanmiCoder/MediaCrawler,小红书笔记 | 评论爬虫、抖音视频 | 评论爬虫、快手视频 | 评论爬虫、B 站视频 ｜ 评论爬虫、微博帖子 ｜ 评论爬虫、百度贴吧帖子 ｜ 百度贴吧评论回复爬虫 | 知乎问答文章｜评论爬虫
-4,addyosmani / agent-skills,JavaScript,"85,905",659,https://github.com/addyosmani/agent-skills,Production-grade engineering skills for AI coding agents.
-5,paperclipai / paperclip,TypeScript,"76,724",198,https://github.com/paperclipai/paperclip,The open-source app everyone uses to manage agents at work
-6,PrimeIntellect-ai / prime-agent,TypeScript,"13,381","2,642",https://github.com/PrimeIntellect-ai/prime-agent,A self-improving RLM agent for coding workflows and long-running autonomous tasks.
-7,LadybirdBrowser / ladybird,C++,"65,320",56,https://github.com/LadybirdBrowser/ladybird,Truly independent web browser
-8,ruvnet / RuView,Rust,"89,467",154,https://github.com/ruvnet/RuView,"π RuView turns commodity WiFi signals into real-time spatial intelligence, vital sign monitoring, and presence detection — all without a single pixel of video."
-9,danielmiessler / LifeOS,TypeScript,"18,091",315,https://github.com/danielmiessler/LifeOS,⛰️A General Hill-climbing AI harness that helps you move from Current State to Ideal State in both Life and Work.
-10,firecrawl / firecrawl,TypeScript,"165,332",835,https://github.com/firecrawl/firecrawl,"The context API to search, scrape, and interact with the web at scale. 🔥"
-11,TauricResearch / TradingAgents,Python,"97,388",177,https://github.com/TauricResearch/TradingAgents,TradingAgents: Multi-Agents LLM Financial Trading Framework
-12,google-deepmind / weathernext,Python,"7,410",325,https://github.com/google-deepmind/weathernext,No description
-13,vitali87 / code-graph-rag,Python,"3,617",682,https://github.com/vitali87/code-graph-rag,"The ultimate RAG for your monorepo. Query, understand, and edit multi-language codebases with the power of AI and knowledge graphs"
-14,pingdotgg / t3code,TypeScript,"18,104",389,https://github.com/pingdotgg/t3code,No description
-15,Comfy-Org / ComfyUI,Python,"126,515",922,https://github.com/Comfy-Org/ComfyUI,"The most powerful and modular diffusion model GUI, api and backend with a graph/nodes interface."
-16,opa334 / Dopamine,C,"6,103",111,https://github.com/opa334/Dopamine,Dopamine is a semi-untethered jailbreak for iOS 15 to 26(.0.1)
+1,semantica-agi / semantica,Python,"4,474",970,https://github.com/semantica-agi/semantica,Graph-Native Infrastructure for Context and Accountable AI Systems
+2,msitarzewski / agency-agents,Shell,"142,152","1,349",https://github.com/msitarzewski/agency-agents,"A complete AI agency at your fingertips - From frontend wizards to Reddit community ninjas, from whimsy injectors to reality checkers. Each agent is a specialized expert with personality, processes, and proven deliverables."
+3,NanmiCoder / MediaCrawler,Python,"61,532",259,https://github.com/NanmiCoder/MediaCrawler,小红书笔记 | 评论爬虫、抖音视频 | 评论爬虫、快手视频 | 评论爬虫、B 站视频 ｜ 评论爬虫、微博帖子 ｜ 评论爬虫、百度贴吧帖子 ｜ 百度贴吧评论回复爬虫 | 知乎问答文章｜评论爬虫
+4,addyosmani / agent-skills,JavaScript,"85,970",659,https://github.com/addyosmani/agent-skills,Production-grade engineering skills for AI coding agents.
+5,paperclipai / paperclip,TypeScript,"76,818",198,https://github.com/paperclipai/paperclip,The open-source app everyone uses to manage agents at work
+6,PrimeIntellect-ai / prime-agent,TypeScript,"13,497","2,642",https://github.com/PrimeIntellect-ai/prime-agent,A self-improving RLM agent for coding workflows and long-running autonomous tasks.
+7,LadybirdBrowser / ladybird,C++,"65,345",56,https://github.com/LadybirdBrowser/ladybird,Truly independent web browser
+8,ruvnet / RuView,Rust,"89,508",154,https://github.com/ruvnet/RuView,"π RuView turns commodity WiFi signals into real-time spatial intelligence, vital sign monitoring, and presence detection — all without a single pixel of video."
+9,danielmiessler / LifeOS,TypeScript,"18,162",315,https://github.com/danielmiessler/LifeOS,⛰️A General Hill-climbing AI harness that helps you move from Current State to Ideal State in both Life and Work.
+10,firecrawl / firecrawl,TypeScript,"165,457",835,https://github.com/firecrawl/firecrawl,"The context API to search, scrape, and interact with the web at scale. 🔥"
+11,TauricResearch / TradingAgents,Python,"97,460",177,https://github.com/TauricResearch/TradingAgents,TradingAgents: Multi-Agents LLM Financial Trading Framework
+12,google-deepmind / weathernext,Python,"7,432",325,https://github.com/google-deepmind/weathernext,No description
+13,vitali87 / code-graph-rag,Python,"3,653",682,https://github.com/vitali87/code-graph-rag,"The ultimate RAG for your monorepo. Query, understand, and edit multi-language codebases with the power of AI and knowledge graphs"
+14,pingdotgg / t3code,TypeScript,"18,134",389,https://github.com/pingdotgg/t3code,No description
+15,Comfy-Org / ComfyUI,Python,"126,603",922,https://github.com/Comfy-Org/ComfyUI,"The most powerful and modular diffusion model GUI, api and backend with a graph/nodes interface."
+16,opa334 / Dopamine,C,"6,139",111,https://github.com/opa334/Dopamine,Dopamine is a semi-untethered jailbreak for iOS 15 to 26(.0.1)
